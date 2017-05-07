@@ -1,2 +1,2 @@
 # uranium
-# uranium
+# learning some python.
