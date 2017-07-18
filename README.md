@@ -1,2 +1,0 @@
-# uranium
-# learning some python.
