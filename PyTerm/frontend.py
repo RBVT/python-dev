@@ -1,11 +1,12 @@
 from tkinter import *
 
 
+root = Tk()
+
+
 def ClearScreen():
     print("\033[0d\033[2J")
 
-def Debug_Message():
-    print("CLI Output:")
 
 def doNothing():
     print("Working one!")
@@ -16,14 +17,19 @@ def ExitApp():
 
 
 ClearScreen()
-Debug_Message()
+
+width = 800
+height = 600
+
+print("Width is ", width)
+print("Height is ", height)
 
 
-root = Tk()
-root.geometry("800x600")
+root.geometry('{}x{}'.format(width, height))
 root.title("PyTerm 0.1")
 
-
+width = root.winfo_width()
+height = root.winfo_height()
 
 menu = Menu(root)
 root.config(menu = menu)
