@@ -19,7 +19,7 @@ ClearScreen()
 Debug_Message()
 
 
-root  = Tk()
+root = Tk()
 root.geometry("800x600")
 root.title("PyTerm 0.1")
 
@@ -99,7 +99,8 @@ menu.add_cascade(label = "Help", menu = HelpMenu)
 HelpMenu.add_command(label = "About", command = doNothing)
 
 
-
+text = Text(root, height = 30, width = 99)
+text.grid()
 
 
 root.mainloop()
