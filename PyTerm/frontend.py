@@ -18,23 +18,23 @@ def ExitApp():
 
 ClearScreen()
 
-width = 800
-height = 600
+screen_width = 800
+screen_height = 600
 
-print("Width is ", width)
-print("Height is ", height)
-
-
-root.geometry('{}x{}'.format(width, height))
 root.title("PyTerm 0.1")
 
-width = root.winfo_width()
-height = root.winfo_height()
 
 menu = Menu(root)
 root.config(menu = menu)
 
+root.geometry('{}x{}'.format(screen_width, screen_height))
 
+print('Width is {}'.format(screen_width))
+print('Height is {}'.format(screen_height))
+
+
+screen_width = root.winfo_width()
+screen_height = root.winfo_height()
 
 subMenu = Menu(menu)
 menu.add_cascade(label = "FIle", menu = subMenu)
@@ -105,9 +105,9 @@ menu.add_cascade(label = "Help", menu = HelpMenu)
 HelpMenu.add_command(label = "About", command = doNothing)
 
 
-text = Text(root, height = 30, width = 99)
+text = Text(root, height = screen_height + 30, width = screen_width + 98)
 text.grid()
 
 
 root.mainloop()
-
+ClearScreen()
